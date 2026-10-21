@@ -1,0 +1,31 @@
+﻿   using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program182
+    {
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Расширение файла (txt, cs, html, png, mp3): ");
+            string  ext = Console.ReadLine()?.Trim().ToLower();
+            string type;
+
+            switch (ext)
+            {
+                case "txt": type = "Текстовый документ"; break;
+                case "cs": type = "Исходный код C#"; break;
+                case "html": type = "Веб-страница"; break;
+                case "png": type = "Изображение"; break;
+                case "mp3": type = "Аудиофайл"; break;
+                default:
+                    Console.WriteLine("Неизвестный формат.");
+                    return;
+            }
+            Console.WriteLine(type);
+        }
+    }
+    }
